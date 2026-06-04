@@ -416,7 +416,7 @@ $charge = Tap::getCharge('chg_xxxxx');
 $charges = Tap::listCharges([
     'status' => 'CAPTURED',
     'limit' => 20,
-    'period' => ['date_from' => '2024-01-01', 'date_to' => '2024-12-31'],
+    'period' => ['date_from' => '2026-01-01', 'date_to' => '2026-12-31'],
 ]);
 
 // Update charge metadata
