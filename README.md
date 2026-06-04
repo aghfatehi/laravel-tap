@@ -23,7 +23,6 @@ A professional Laravel package for integrating [Tap Payments](https://tap.compan
 
 - [Features](#features)
 - [Requirements](#requirements)
-- [Architecture Overview](#architecture-overview)
 - [Installation](#installation)
 - [Configuration](#configuration)
 - [Phase 1: Payment Processing (Charges)](#-phase-1-payment-processing-charges)
@@ -68,43 +67,6 @@ A professional Laravel package for integrating [Tap Payments](https://tap.compan
 | 11.x    | ^8.2  | ^1.0            |
 | 12.x    | ^8.2  | ^1.0            |
 | 13.x    | ^8.2  | ^1.0            |
-
----
-
-## Architecture Overview
-
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                       YOUR LARAVEL APP                          │
-│                                                                 │
-│  ┌──────────────┐   ┌───────────────┐   ┌───────────────────┐  │
-│  │ ChargeController │  │ OrderController  │  │ WebhookController │  │
-│  └───────┬───────┘   └───────┬───────┘   └────────┬──────────┘  │
-│          │                   │                     │             │
-│  ┌───────▼───────────────────▼─────────────────────▼──────────┐  │
-│  │                   TapClient (cURL)                         │  │
-│  │    createCharge | getCharge | captureCharge | refund...    │  │
-│  └───────────────────────┬────────────────────────────────────┘  │
-│                          │                                       │
-│                    ┌─────▼──────┐                                │
-│                    │ Tap API v2 │                                │
-│                    │ api.tap.co │                                │
-│                    └────────────┘                                │
-└─────────────────────────────────────────────────────────────────┘
-```
-
-**Core Components:**
-
-| Component | File | Responsibility |
-|-----------|------|---------------|
-| `TapClient` | `src/Services/TapClient.php` | All cURL calls to Tap API v2 |
-| `WebhookValidator` | `src/Services/WebhookValidator.php` | HMAC-SHA256 hashstring verification |
-| `Tap Facade` | `src/Facades/Tap.php` | `Tap::createCharge(...)` fluent API |
-| `ChargeController` | `src/Controllers/ChargeController.php` | Phase 1 route handlers |
-| `OrderController` | `src/Controllers/OrderController.php` | Phase 2 route handlers |
-| `WebhookController` | `src/Controllers/WebhookController.php` | Webhook receiver |
-| `TapTransaction` | `src/Models/TapTransaction.php` | DB logging model |
-| Events | `src/Events/*.php` | PaymentSucceeded, PaymentFailed, WebhookReceived |
 
 ---
 
@@ -751,7 +713,9 @@ TAP_PUBLIC_KEY=pk_test_YOUR_TAP_PUBLIC_KEY
 TAP_SANDBOX_MODE=true
 ```
 
-> **Note**: You can also generate your own test keys from [Tap Dashboard](https://dashboard.tap.company) → Developers → API Keys.
+> **Note**: Your API keys are provided by Tap Payments through the merchant dashboard. You can retrieve them from the [Merchant Dashboard](https://businesses.tap.company) → Developers → API Keys.  The keys cannot be generated or modified by the developer; they are assigned by Tap.
+>
+> For viewing reports and payment transactions (both staging and production), visit: [Tap Reports Portal](https://report.payments.tap.company/en/payouts) 
 
 ---
 
