@@ -1,11 +1,11 @@
 <p align="center">
-    <img src="https://img.shields.io/badge/php-^8.1-8892BF.svg?style=for-the-badge&logo=php" alt="PHP Version">
-    <img src="https://img.shields.io/badge/Laravel-10|11|12|13-FF2D20.svg?style=for-the-badge&logo=laravel" alt="Laravel Version">
-    <img src="https://img.shields.io/badge/Tap-Payment_Gateway-00A859.svg?style=for-the-badge" alt="Tap Payment Gateway">
-    <img src="https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge" alt="License">
-    <img src="https://img.shields.io/github/actions/workflow/status/aghfatehi/laravel-tap/laravel.yml?style=for-the-badge&label=Tests" alt="Tests">
-    <img src="https://img.shields.io/packagist/v/aghfatehi/laravel-tap.svg?style=for-the-badge" alt="Packagist">
-    <img src="https://img.shields.io/packagist/dt/aghfatehi/laravel-tap.svg?style=for-the-badge" alt="Downloads">
+    <a href="https://www.php.net/"><img src="https://img.shields.io/badge/php-^8.1-8892BF.svg?style=for-the-badge&logo=php" alt="PHP Version"></a>
+    <a href="https://laravel.com"><img src="https://img.shields.io/badge/Laravel-10|11|12|13-FF2D20.svg?style=for-the-badge&logo=laravel" alt="Laravel Version"></a>
+    <a href="https://www.tap.company"><img src="https://img.shields.io/badge/Tap-Payment_Gateway-00A859.svg?style=for-the-badge" alt="Tap Payment Gateway"></a>
+    <a href="https://github.com/aghfatehi/laravel-tap/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge" alt="License"></a>
+    <a href="https://github.com/aghfatehi/laravel-tap/actions/workflows/laravel.yml"><img src="https://img.shields.io/github/actions/workflow/status/aghfatehi/laravel-tap/laravel.yml?style=for-the-badge&label=Tests" alt="Tests"></a>
+    <a href="https://packagist.org/packages/aghfatehi/laravel-tap"><img src="https://img.shields.io/packagist/v/aghfatehi/laravel-tap.svg?style=for-the-badge" alt="Packagist"></a>
+    <a href="https://packagist.org/packages/aghfatehi/laravel-tap"><img src="https://img.shields.io/packagist/dt/aghfatehi/laravel-tap.svg?style=for-the-badge" alt="Downloads"></a>
 </p>
 
 <h1 align="center">Laravel Tap Payment Gateway</h1>
