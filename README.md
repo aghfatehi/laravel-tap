@@ -3,7 +3,7 @@
 [![Latest Version](https://img.shields.io/github/v/release/aghfatehi/laravel-tap)](https://github.com/aghfatehi/laravel-tap/releases)
 [![Laravel](https://img.shields.io/badge/Laravel-10~13-red.svg)](https://laravel.com)
 [![PHP](https://img.shields.io/badge/PHP-8.1+-blue.svg)](https://php.net)
-[![License](https://img.shields.io/github/license/aghfatehi/laravel-tap)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Total Downloads](https://img.shields.io/github/downloads/aghfatehi/laravel-tap/total)](https://github.com/aghfatehi/laravel-tap/releases)
 
 A professional Laravel package for integrating [Tap Payments](https://tap.company) - the unified payment platform in the Middle East. Supports KNET, Mada, Visa, Mastercard, American Express, Apple Pay, Google Pay, STC Pay, Tabby, Tamara, Benefit, Fawry, OmanNet, NAPS, and more.
