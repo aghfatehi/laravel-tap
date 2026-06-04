@@ -1,10 +1,19 @@
-# Laravel Tap Payment Gateway
+<p align="center">
+    <img src="https://img.shields.io/badge/php-^8.1-8892BF.svg?style=for-the-badge&logo=php" alt="PHP Version">
+    <img src="https://img.shields.io/badge/Laravel-10|11|12|13-FF2D20.svg?style=for-the-badge&logo=laravel" alt="Laravel Version">
+    <img src="https://img.shields.io/badge/Tap-Payment_Gateway-00A859.svg?style=for-the-badge" alt="Tap Payment Gateway">
+    <img src="https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge" alt="License">
+    <img src="https://img.shields.io/github/actions/workflow/status/aghfatehi/laravel-tap/laravel.yml?style=for-the-badge&label=Tests" alt="Tests">
+    <img src="https://img.shields.io/packagist/v/aghfatehi/laravel-tap.svg?style=for-the-badge" alt="Packagist">
+    <img src="https://img.shields.io/packagist/dt/aghfatehi/laravel-tap.svg?style=for-the-badge" alt="Downloads">
+</p>
 
-[![Latest Version](https://img.shields.io/github/v/release/aghfatehi/laravel-tap)](https://github.com/aghfatehi/laravel-tap/releases)
-[![Laravel](https://img.shields.io/badge/Laravel-10~13-red.svg)](https://laravel.com)
-[![PHP](https://img.shields.io/badge/PHP-8.1+-blue.svg)](https://php.net)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Total Downloads](https://img.shields.io/github/downloads/aghfatehi/laravel-tap/total)](https://github.com/aghfatehi/laravel-tap/releases)
+<h1 align="center">Laravel Tap Payment Gateway</h1>
+<h3 align="center">Accept payments via Tap — KNET, Mada, Visa, Mastercard, Apple Pay, STC Pay, Tabby, Tamara, and more</h3>
+
+<p align="center">
+    <strong>Laravel package for integrating Tap Payments - the unified payment platform in the Middle East. Supports KNET, Mada, Visa, Mastercard, American Express, Apple Pay, Google Pay, STC Pay, Tabby, Tamara, Benefit, Fawry, OmanNet, NAPS, and more.</strong>
+</p>
 
 A professional Laravel package for integrating [Tap Payments](https://tap.company) - the unified payment platform in the Middle East. Supports KNET, Mada, Visa, Mastercard, American Express, Apple Pay, Google Pay, STC Pay, Tabby, Tamara, Benefit, Fawry, OmanNet, NAPS, and more.
 
@@ -721,11 +730,15 @@ All webhooks are validated using HMAC-SHA256 hashstring verification. If the has
 composer test
 ```
 
+```bash
+vendor/bin/phpunit
+```
+
 The test suite covers:
 
-- **TapClientTest**: URL resolution, method existence
-- **WebhookValidatorTest**: Hashstring generation, validation, currency rounding
-- **ChargeControllerTest**: Route accessibility
+- **Unit\\TapClientTest**: URL resolution, method existence
+- **Unit\\WebhookValidatorTest**: Hashstring generation, validation, currency rounding
+- **Feature\\TapChargeControllerTest**: Route accessibility
 
 ### Sandbox Credentials
 

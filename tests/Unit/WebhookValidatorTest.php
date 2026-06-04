@@ -1,8 +1,9 @@
 <?php
 
-namespace Aghfatehi\Tap\Tests;
+namespace Aghfatehi\Tap\Tests\Unit;
 
 use Aghfatehi\Tap\Services\WebhookValidator;
+use Aghfatehi\Tap\Tests\TestCase;
 
 class WebhookValidatorTest extends TestCase
 {
@@ -73,15 +74,15 @@ class WebhookValidatorTest extends TestCase
     }
 
     /** @test */
-    public function it_rounds_amount_correctly_by_currency()
+    public function it_formats_amount_correctly_by_currency()
     {
         $reflection = new \ReflectionClass($this->validator);
-        $method = $reflection->getMethod('roundAmount');
+        $method = $reflection->getMethod('formatAmount');
         $method->setAccessible(true);
 
-        $this->assertEquals(100.50, $method->invoke($this->validator, 100.5, 'SAR'));
-        $this->assertEquals(100.500, $method->invoke($this->validator, 100.5, 'KWD'));
-        $this->assertEquals(100.00, $method->invoke($this->validator, 100, 'AED'));
-        $this->assertEquals(100.000, $method->invoke($this->validator, 100, 'BHD'));
+        $this->assertEquals('100.50', $method->invoke($this->validator, 100.5, 'SAR'));
+        $this->assertEquals('100.500', $method->invoke($this->validator, 100.5, 'KWD'));
+        $this->assertEquals('100.00', $method->invoke($this->validator, 100, 'AED'));
+        $this->assertEquals('100.000', $method->invoke($this->validator, 100, 'BHD'));
     }
 }

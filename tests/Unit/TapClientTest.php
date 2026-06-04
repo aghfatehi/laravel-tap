@@ -1,8 +1,9 @@
 <?php
 
-namespace Aghfatehi\Tap\Tests;
+namespace Aghfatehi\Tap\Tests\Unit;
 
 use Aghfatehi\Tap\Services\TapClient;
+use Aghfatehi\Tap\Tests\TestCase;
 
 class TapClientTest extends TestCase
 {

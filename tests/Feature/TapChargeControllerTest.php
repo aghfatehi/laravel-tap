@@ -1,17 +1,11 @@
 <?php
 
-namespace Aghfatehi\Tap\Tests;
+namespace Aghfatehi\Tap\Tests\Feature;
 
-use Orchestra\Testbench\TestCase;
+use Aghfatehi\Tap\Tests\TestCase;
 
 class TapChargeControllerTest extends TestCase
 {
-    protected function getPackageProviders($app)
-    {
-        return [
-            \Aghfatehi\Tap\TapServiceProvider::class,
-        ];
-    }
 
     /** @test */
     public function it_can_access_cancel_route()

@@ -32,7 +32,7 @@ class WebhookValidator
             ?? $payload['created']
             ?? '';
 
-        $amount = $this->roundAmount($amount, $currency);
+        $amount = $this->formatAmount($amount, $currency);
 
         $toBeHashed = "x_id{$id}"
             . "x_amount{$amount}"
@@ -63,10 +63,10 @@ class WebhookValidator
      * AED, SAR, QAR, USD, EUR, GBP, EGP → 2 decimal places
      * BHD, KWD, OMR, JOD               → 3 decimal places
      */
-    protected function roundAmount(float $amount, string $currency): float
+    protected function formatAmount(float $amount, string $currency): string
     {
         $threeDecimalCurrencies = ['BHD', 'KWD', 'OMR', 'JOD'];
         $decimals = in_array(strtoupper($currency), $threeDecimalCurrencies, true) ? 3 : 2;
-        return round($amount, $decimals);
+        return number_format($amount, $decimals, '.', '');
     }
 }
